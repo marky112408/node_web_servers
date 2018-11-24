@@ -12,9 +12,9 @@ hbs.registerHelper('getFullYear', () => {
 
 app.set('veiw engine', 'hbs');
 
-app.use((req, res, next) => {
-	res.render('maintenance.hbs');
-});
+// app.use((req, res, next) => {
+// 	res.render('maintenance.hbs');
+// });
 
 app.use((req, res, next) => {
 	var log = new Date().toString()+"-"+req.method+" "+req.url+"\n";

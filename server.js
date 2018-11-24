@@ -1,6 +1,7 @@
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
+const port = process.env.PORT || 3000;
 
 var app = express();
 
@@ -43,6 +44,6 @@ app.get('/bad', (req, res) => {
 	res.send('<h1 style = "text-align:center;">404 Request Not Found</h1>');
 });
 
-app.listen(3000, () => {
-	console.log('Server is starting at port 3000');
+app.listen(port, () => {
+	console.log('Server is starting at port '+port);
 });

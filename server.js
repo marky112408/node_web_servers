@@ -10,6 +10,10 @@ hbs.registerHelper('getFullYear', () => {
 	return new Date().getFullYear();
 });
 
+hbs.registerHelper('screamIt', (txt) => {
+	return txt.toUpperCase();
+});
+
 app.set('veiw engine', 'hbs');
 
 // app.use((req, res, next) => {
@@ -38,6 +42,10 @@ app.get('/about', (req, res) => {
 	res.render('about.hbs', {
 		pageTitle: 'About Page',
 	})
+});
+
+app.get('/project', (req, res) => {
+	res.render('projects.hbs');
 });
 
 app.get('/bad', (req, res) => {
